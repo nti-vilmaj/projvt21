@@ -1,1 +1,69 @@
-/* Denna fil skall innehålla din CSS kod */
+*{
+    margin:0;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+@media screen and (min-width: 1023px) {
+    #gridwrapper{
+        display:grid;
+        height: 200vh;
+        width: 100vw;
+        grid-template-areas: 
+        'he he he he'
+        'na na na na'
+        'a1 a1 a1 a1'
+        'a2 a2 a2 a2'
+        'a2 a2 a2 a2'
+        'a3 a3 a3 a3'
+        'a3 a3 a3 a3'
+        'fo fo fo fo';
+        grid-template-columns: repeat(1fr);
+        grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+    }
+}
+
+#gridwrapper{
+    display:grid;
+    height: 200vh;
+    width: 100vw;
+    grid-template-areas: 
+    'na he he he'
+    'a1 a1 a1 a1'
+    'a2 a2 a2 a2'
+    'a2 a2 a2 a2'
+    'a3 a3 a3 a3'
+    'a3 a3 a3 a3'
+    'fo fo fo fo';
+    grid-template-columns: repeat(1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+}
+#header{
+    grid-area: he;
+    background-color: cornflowerblue;
+}
+
+#nav{
+    grid-area: na;
+    background-color: crimson;
+}
+
+#article1{
+ grid-area: a1;
+ background-color: darkcyan;
+}
+
+#article2{
+    grid-area: a2;
+    background-color: darkgoldenrod;
+}
+
+#article3{
+    grid-area: a3;
+    background-color: darkgreen;
+}
+
+#footer{
+    grid-area: fo;
+    background-color: darkkhaki;
+}
