@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../../Webbutveckling/meny"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "meny"
+	}
+}

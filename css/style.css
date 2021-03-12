@@ -18,7 +18,7 @@
         'a3 a3 a3 a3'
         'a3 a3 a3 a3'
         'fo fo fo fo';
-        grid-template-columns: repeat(1fr);
+        grid-template-columns: repeat(4 *1fr);
         grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
     }
 }
@@ -66,4 +66,78 @@
 #footer{
     grid-area: fo;
     background-color: darkkhaki;
+}
+
+
+/* Tränings sida */
+
+
+#tgridwrapper{
+    display:grid;
+    height: 200vh;
+    width: 100vw;
+    grid-template-areas: 
+    'tna the the the'
+    'tas tas tas tas'
+    'ta1 ta1 ta1 ta1'
+    'ta2 ta2 ta2 ta2'
+    'ta3 ta3 ta3 ta3'
+    'ta4 ta4 ta4 ta4'
+    'ta5 ta5 ta5 ta5'
+    'tfo tfo tfo tfo';
+grid-template-columns: repeat(4 *1fr);
+grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+}
+
+#theader{
+    grid-area: the;
+    background-color: aqua;
+}
+
+#tnav{
+    grid-area: tna;
+    background-color: brown;
+}
+
+#taside{
+    grid-area: tas;
+    background-color: burlywood;
+}
+
+#tarticle2{
+    grid-area: ta2;
+    background-color: cadetblue;
+}
+
+#tarticle3{
+    grid-area: ta3;
+    background-color: cadetblue;
+}
+
+#tarticle4{
+    grid-area: ta4;
+    background-color: cadetblue;
+}
+
+#tarticle5{
+    grid-area: ta5;
+    background-color: cadetblue;
+}
+
+#tfooter{
+    grid-area: tfo;
+    background-color: coral;
+}
+
+
+/* Kappsegling */
+
+#kgridwrapper{
+    display:grid;
+    height: 200vh;
+    width: 100vw;
+    grid-template-areas: 
+    'kna khe kne khe';
+grid-template-columns: repeat(4 *1fr);
+grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
 }
