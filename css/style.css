@@ -21,8 +21,33 @@
         grid-template-columns: repeat(4 *1fr);
         grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
     }
+    #header{
+        display:grid;
+        grid-template-columns: 0.5fr 3fr ;
+        grid-template-rows: 1fr;
+
+        }
+
+#nav{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+    
+ul{
+    list-style-type: none;
+    word-spacing: 50px;
 }
 
+li{
+
+    float: left;
+
+}
+    }
+
+
+@media screen and (max-width: 1022px) {
 #gridwrapper{
     display:grid;
     height: 200vh;
@@ -38,14 +63,87 @@
     grid-template-columns: repeat(1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
 }
+
+/* meny mobil */
+#nav{
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    height:1fr ;
+    background-color: rgb(54, 105, 54);
+    font-size: sans-serif;
+    
+}
+
+.navLinks{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position:absolute;
+    left:0px;
+    height:90vh;
+    top:-90vh;
+    align-items: center;
+    background-color: rgb(54, 105, 54);
+    width: 32%;
+    transition: all 1s;
+}
+
+.navActive{
+    transform: translateY(100vh);
+}
+
+.navLinks li{
+    list-style: none;
+}
+
+.navLinks a{
+    color: white;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.burger{
+    margin:50px;
+    cursor: pointer;
+}
+
+.burger div{
+  height:3px;
+  width: 25px;
+  background-color: white;
+  margin:5px;
+  border-radius: 10%;
+  transition: all 0.4s;
+
+}
+
+.toggle .Line1{
+    transform:rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .Line2{
+    opacity:0;
+}
+
+.toggle .Line3{
+    transform:rotate(45deg) translate(-5px, -6px);
+    /* meny mobil slutar */
+} 
+
+
+}
 #header{
     grid-area: he;
-    background-color: cornflowerblue;
+    background-color:white;
+    
 }
 
 #nav{
     grid-area: na;
-    background-color: crimson;
+    background-color: rgb(54, 105, 54);
 }
 
 #article1{
@@ -68,10 +166,32 @@
     background-color: darkkhaki;
 }
 
+.se1{
+ background-color:white;
+ display:flex;
+ justify-content: center;
+}
+
+.se2{
+    background-image: url("../img/IMG_6581.jpg");
+}
+
+
+
+
+a{
+    text-decoration: none;
+}
+
+h2{
+    color:white;
+    
+}
+
 
 /* Tränings sida */
 
-
+@media screen and (max-width: 1022px) {
 #tgridwrapper{
     display:grid;
     height: 200vh;
@@ -87,6 +207,7 @@
     'tfo tfo tfo tfo';
 grid-template-columns: repeat(4 *1fr);
 grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+}
 }
 
 #theader{
@@ -132,6 +253,7 @@ grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
 
 /* Kappsegling */
 
+@media screen and (max-width: 1022px) {
 #kgridwrapper{
     display:grid;
     height: 200vh;
@@ -140,4 +262,5 @@ grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
     'kna khe kne khe';
 grid-template-columns: repeat(4 *1fr);
 grid-template-rows: 1fr 0.5fr 1fr 1fr 1fr 1fr 1fr 0.5fr;
+}
 }
